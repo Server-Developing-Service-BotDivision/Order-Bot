@@ -1,4 +1,4 @@
-cosnt discord = require('discord.js');
+const discord = require('discord.js');
 var bot = new discord.Client();
 prefix = "log!"
 
