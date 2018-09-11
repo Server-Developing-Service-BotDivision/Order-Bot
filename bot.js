@@ -8,13 +8,13 @@ require('fs').readdir("./commands/", (err, files) => {
   if (err) return console.log(`Command loading failed!`);
   files.filter(f => f.split(".").pop() === "js").forEach((f, i) => {
     bot.commands.set(require(`./commands/${f}`).help.name, require(`./commands/${f}`));
-  });
+  })
 });
 
 bot.on("ready", () => {
   console.log("I am logged on.")
   bot.user.setActivity("Waiting to log orders!")
-})
+});
 
 bot.on('message', message => {
   let mArray = message.content.split(" ")
