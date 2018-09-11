@@ -26,6 +26,6 @@ bot.on('message', message => {
   
   if (cmd) {
     cmd.run(bot, message, args, discord)
-})
+}
 
 bot.login(process.env.TOKEN)
