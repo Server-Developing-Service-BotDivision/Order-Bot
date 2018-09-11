@@ -1,5 +1,7 @@
 cosnt discord = require('discord.js');
 var bot = new discord.Client();
+prefix = "log!"
+
 
 require('fs').readdir("./commands/", (err, files) => {
   console.log("Loading commands...");
@@ -25,3 +27,5 @@ bot.on('message', message => {
   if (cmd) {
     cmd.run(bot, message, args, discord)
 })
+
+bot.login(process.env.TOKEN)
